@@ -1,24 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package desarrollo3_practica3_3;
+package desarrollo3_practica3;
 
 import java.util.Scanner;
 
-/**
- *
- * @author PC
- */
 public class main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NumeroNegativoExcepcion {
         Scanner teclado = new Scanner(System.in);
         double n;
         System.out.println("Introduce un valor");
         n = teclado.nextInt();
         if(n>0){
             System.out.println("La raiz es: " + Math.sqrt(n));
+        }
+        else{
+            throw new NumeroNegativoExcepcion("El numero no es valido");
         }
     }
 }
